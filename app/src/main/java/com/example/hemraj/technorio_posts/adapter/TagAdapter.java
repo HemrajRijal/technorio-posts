@@ -60,7 +60,6 @@ public class TagAdapter extends RecyclerView.Adapter<TagAdapter.Tag_ViewHolder> 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(context, "Recycle Click" + position, Toast.LENGTH_SHORT).show();
                 if (position == 0){
                     Intent intent = new Intent (view.getContext(), Tag1Post.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

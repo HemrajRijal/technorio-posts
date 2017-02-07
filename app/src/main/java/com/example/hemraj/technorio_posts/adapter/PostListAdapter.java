@@ -8,9 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hemraj.technorio_posts.R;
 import com.example.hemraj.technorio_posts.activity.POST.Post1TAg;
+import com.example.hemraj.technorio_posts.activity.POST.Post2Tag;
+import com.example.hemraj.technorio_posts.activity.POST.Post3Tag;
+import com.example.hemraj.technorio_posts.activity.POST.Post4Tag;
 import com.example.hemraj.technorio_posts.model.Post;
 
 import java.util.List;
@@ -67,12 +71,36 @@ public class PostListAdapter extends RecyclerView.Adapter<PostListAdapter.PostVi
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(context, "Recycle Click" + position, Toast.LENGTH_SHORT).show();
                 if (position == 0) {
                     Intent intent = new Intent(view.getContext(), Post1TAg.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
 
+                }
+
+                if (position == 1) {
+                    Intent intent = new Intent(view.getContext(), Post2Tag.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+
+                }
+
+                if (position == 2) {
+                    Intent intent = new Intent(view.getContext(), Post3Tag.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+
+                }
+
+                if (position == 3) {
+                    Intent intent = new Intent(view.getContext(), Post4Tag.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+
+                }
+
+                if (position == 4) {
+                    Toast.makeText(context, "Sorry This post is not associated with any Tag ", Toast.LENGTH_SHORT).show();
                 }
             }});
     }

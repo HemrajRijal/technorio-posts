@@ -23,6 +23,9 @@
         <activity android:name=".activity.PostActivity"></activity>
         <activity android:name=".activity.TagActivity"></activity>
         <activity android:name=".activity.POST.Post1TAg"></activity>
+        <activity android:name=".activity.POST.Post2Tag"></activity>
+        <activity android:name=".activity.POST.Post3Tag"></activity>
+        <activity android:name=".activity.POST.Post4Tag"></activity>
     </application>
 
 </manifest>

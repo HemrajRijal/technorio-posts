@@ -8,9 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hemraj.technorio_posts.R;
 import com.example.hemraj.technorio_posts.activity.TAG.Tag1Post;
+import com.example.hemraj.technorio_posts.activity.TAG.Tag3Post;
+import com.example.hemraj.technorio_posts.activity.TAG.Tag4Post;
+import com.example.hemraj.technorio_posts.activity.TAG.Tag5Post;
+import com.example.hemraj.technorio_posts.activity.TAG.Tag6Post;
+import com.example.hemraj.technorio_posts.activity.TAG.Tag7Post;
+import com.example.hemraj.technorio_posts.activity.TAG.Tag8Post;
 
 import java.util.List;
 
@@ -66,6 +73,54 @@ public class TagAdapter extends RecyclerView.Adapter<TagAdapter.Tag_ViewHolder> 
                     context.startActivity(intent);
 
                 }
+
+                if (position == 1){
+
+
+                    Toast.makeText(context, "Sorry This Tag is not associated with any Post ", Toast.LENGTH_SHORT).show();
+                }
+                if (position == 2){
+                    Intent intent = new Intent (view.getContext(), Tag3Post.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+
+                }
+
+
+                if (position == 3){
+                    Intent intent = new Intent (view.getContext(), Tag4Post.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+
+                }
+
+                if (position == 4){
+                    Intent intent = new Intent (view.getContext(), Tag5Post.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+
+                }
+
+
+                if (position == 5){
+                    Intent intent = new Intent (view.getContext(), Tag6Post.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+
+                }
+                if (position == 6){
+                    Intent intent = new Intent (view.getContext(), Tag7Post.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+
+                }
+                if (position == 7){
+                    Intent intent = new Intent (view.getContext(), Tag8Post.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+
+                }
+
 
             }});
     }

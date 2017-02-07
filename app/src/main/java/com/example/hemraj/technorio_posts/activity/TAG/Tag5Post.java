@@ -1,4 +1,4 @@
-package com.example.hemraj.technorio_posts.activity;
+package com.example.hemraj.technorio_posts.activity.TAG;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,12 +9,13 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.example.hemraj.technorio_posts.R;
+import com.example.hemraj.technorio_posts.activity.TagActivity;
 import com.example.hemraj.technorio_posts.adapter.PostListAdapter;
 import com.example.hemraj.technorio_posts.model.Post;
+import com.example.hemraj.technorio_posts.model.Tag;
 import com.example.hemraj.technorio_posts.rest.ApiClient;
 import com.example.hemraj.technorio_posts.rest.ApiInterface;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -25,12 +26,10 @@ import retrofit2.Response;
  * Created by Hemraj on 2/7/2017.
  */
 
-public class PostActivity extends AppCompatActivity {
+public class Tag5Post extends AppCompatActivity {
 
-    private static final String TAG = PostActivity.class.getSimpleName();
-
-    private final static String Post_1 = "1";
-
+    private static final String TAG = Tag1Post.class.getSimpleName();
+    private final static String TAG_KEY = "5";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,28 +42,26 @@ public class PostActivity extends AppCompatActivity {
         final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.post_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
 
-        Call<ArrayList<Post>> call = apiService.getAllPosts();
-        call.enqueue(new Callback<ArrayList<Post>>() {
+
+        Call<Tag> call = apiService.getTag(TAG_KEY);
+        call.enqueue(new Callback<Tag>() {
             @Override
-            public void onResponse(Call<ArrayList<Post>> call, Response<ArrayList<Post>> response) {
+            public void onResponse(Call<Tag> call, Response<Tag> response) {
                 int statusCode = response.code();
-                List<Post> posts = response.body();
-                recyclerView.setAdapter(new PostListAdapter(posts, R.layout.list_item_post, getApplicationContext()));
-
+                List<Post> tags = response.body().getTagPosts();
+                recyclerView.setAdapter(new PostListAdapter(tags, R.layout.list_item_post, getApplicationContext()));
             }
 
             @Override
-            public void onFailure(Call<ArrayList<Post>> call, Throwable t) {
+            public void onFailure(Call<Tag> call, Throwable t) {
+                // Log error here since request failed
                 Log.e(TAG, t.toString());
-
             }
-
-
         });
-
 
     }
 
@@ -73,7 +70,7 @@ public class PostActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case android.R.id.home:
-                Intent homeIntent = new Intent(this, MainActivity.class);
+                Intent homeIntent = new Intent(this, TagActivity.class);
                 homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(homeIntent);
         }
@@ -83,4 +80,5 @@ public class PostActivity extends AppCompatActivity {
 
 
 }
+
 

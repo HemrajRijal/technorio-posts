@@ -27,6 +27,13 @@
         <activity android:name=".activity.POST.Post3Tag"></activity>
         <activity android:name=".activity.POST.Post4Tag"></activity>
         <activity android:name=".activity.TAG.Tag1Post"></activity>
+        <activity android:name=".activity.TAG.Tag3Post"></activity>
+        <activity android:name=".activity.TAG.Tag4Post"></activity>
+        <activity android:name=".activity.TAG.Tag5Post"></activity>
+        <activity android:name=".activity.TAG.Tag6Post"></activity>
+        <activity android:name=".activity.TAG.Tag7Post"></activity>
+        <activity android:name=".activity.TAG.Tag8Post"></activity>
+
     </application>
 
 </manifest>

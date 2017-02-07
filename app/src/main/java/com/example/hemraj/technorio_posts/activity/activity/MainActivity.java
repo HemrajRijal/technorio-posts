@@ -1,4 +1,4 @@
-package com.example.hemraj.technorio_posts.activity;
+package com.example.hemraj.technorio_posts.activity.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

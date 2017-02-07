@@ -1,6 +1,7 @@
 package com.example.hemraj.technorio_posts.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.hemraj.technorio_posts.R;
+import com.example.hemraj.technorio_posts.activity.POST.Post1TAg;
 import com.example.hemraj.technorio_posts.model.Post;
 
 import java.util.List;
@@ -61,6 +63,18 @@ public class PostListAdapter extends RecyclerView.Adapter<PostListAdapter.PostVi
     public void onBindViewHolder(PostViewHolder holder, final int position) {
         holder.postTitle.setText(posts.get(position).getTitle());
         holder.postBody.setText(posts.get(position).getBody());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Toast.makeText(context, "Recycle Click" + position, Toast.LENGTH_SHORT).show();
+                if (position == 0) {
+                    Intent intent = new Intent(view.getContext(), Post1TAg.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+
+                }
+            }});
     }
 
     @Override

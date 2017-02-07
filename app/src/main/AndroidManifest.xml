@@ -22,6 +22,7 @@
         </activity>
         <activity android:name=".activity.PostActivity"></activity>
         <activity android:name=".activity.TagActivity"></activity>
+        <activity android:name=".activity.POST.Post1TAg"></activity>
     </application>
 
 </manifest>

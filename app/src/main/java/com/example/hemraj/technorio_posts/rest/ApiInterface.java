@@ -1,6 +1,7 @@
 package com.example.hemraj.technorio_posts.rest;
 
 import com.example.hemraj.technorio_posts.model.Post;
+import com.example.hemraj.technorio_posts.model.PostResponse;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,4 +20,6 @@ public interface ApiInterface {
     @GET("/tags")
     Call<List<String>> getTagList();
 
+    @GET("/post/1")
+    Call<PostResponse> getPostTag();
 }

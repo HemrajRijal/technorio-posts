@@ -10,7 +10,6 @@ import android.view.MenuItem;
 
 import com.example.hemraj.technorio_posts.R;
 import com.example.hemraj.technorio_posts.activity.PostActivity;
-import com.example.hemraj.technorio_posts.activity.TagActivity;
 import com.example.hemraj.technorio_posts.adapter.TagAdapter;
 import com.example.hemraj.technorio_posts.model.PostResponse;
 import com.example.hemraj.technorio_posts.rest.ApiClient;
@@ -28,7 +27,7 @@ import retrofit2.Response;
 
 public class Post4Tag extends AppCompatActivity {
 
-    private static final String TAG = TagActivity.class.getSimpleName();
+    private static final String TAG = Post4Tag.class.getSimpleName();
 
     private final static String Post = "4";
 

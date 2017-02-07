@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hemraj.technorio_posts.R;
-import com.example.hemraj.technorio_posts.activity.POST.Post1TAg;
+import com.example.hemraj.technorio_posts.activity.POST.Post1Tag;
 import com.example.hemraj.technorio_posts.activity.POST.Post2Tag;
 import com.example.hemraj.technorio_posts.activity.POST.Post3Tag;
 import com.example.hemraj.technorio_posts.activity.POST.Post4Tag;
@@ -72,7 +72,7 @@ public class PostListAdapter extends RecyclerView.Adapter<PostListAdapter.PostVi
             @Override
             public void onClick(View view) {
                 if (position == 0) {
-                    Intent intent = new Intent(view.getContext(), Post1TAg.class);
+                    Intent intent = new Intent(view.getContext(), Post1Tag.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
 

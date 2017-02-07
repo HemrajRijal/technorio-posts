@@ -2,6 +2,7 @@ package com.example.hemraj.technorio_posts.rest;
 
 import com.example.hemraj.technorio_posts.model.Post;
 import com.example.hemraj.technorio_posts.model.PostResponse;
+import com.example.hemraj.technorio_posts.model.Tag;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,4 +24,7 @@ public interface ApiInterface {
 
     @GET("/post/{id}")
     Call<PostResponse> getPostTag(@Path("id") String id);
+
+    @GET("/tag/{id}/")
+    Call<Tag> getTag(@Path("id") String id);
 }

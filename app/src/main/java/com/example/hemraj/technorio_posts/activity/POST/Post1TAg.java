@@ -9,7 +9,7 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.example.hemraj.technorio_posts.R;
-import com.example.hemraj.technorio_posts.activity.MainActivity;
+import com.example.hemraj.technorio_posts.activity.PostActivity;
 import com.example.hemraj.technorio_posts.activity.TagActivity;
 import com.example.hemraj.technorio_posts.adapter.TagAdapter;
 import com.example.hemraj.technorio_posts.model.PostResponse;
@@ -30,8 +30,7 @@ public class Post1TAg extends AppCompatActivity {
 
     private static final String TAG = TagActivity.class.getSimpleName();
 
-    private final static String API_KEY = "1";
-    private final static String API_KEY2 = "2";
+    private final static String Post = "1";
 
 
     @Override
@@ -49,7 +48,7 @@ public class Post1TAg extends AppCompatActivity {
                 ApiClient.getClient().create(ApiInterface.class);
 
 
-        Call<PostResponse> call = apiService.getPostTag();
+        Call<PostResponse> call = apiService.getPostTag(Post);
         call.enqueue(new Callback<PostResponse>() {
             @Override
             public void onResponse(Call<PostResponse> call, Response<PostResponse> response) {
@@ -73,7 +72,7 @@ public class Post1TAg extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case android.R.id.home:
-                Intent homeIntent = new Intent(this, MainActivity.class);
+                Intent homeIntent = new Intent(this, PostActivity.class);
                 homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(homeIntent);
         }

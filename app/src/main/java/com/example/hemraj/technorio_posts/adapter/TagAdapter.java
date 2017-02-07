@@ -30,8 +30,6 @@ public class TagAdapter extends RecyclerView.Adapter<TagAdapter.Tag_ViewHolder> 
     private List<String> Tags;
     private int rowLayout;
     private Context context;
-    private static final String TAG = TagAdapter.class.getSimpleName();
-    public int positions;
 
     public static class Tag_ViewHolder extends RecyclerView.ViewHolder {
         LinearLayout postLayout;

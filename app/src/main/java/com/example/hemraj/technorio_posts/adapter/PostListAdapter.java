@@ -43,8 +43,6 @@ public class PostListAdapter extends RecyclerView.Adapter<PostListAdapter.PostVi
             postBody = (TextView) v.findViewById(R.id.body);
 
         }
-
-
     }
 
     public PostListAdapter(List<Post> posts, int rowLayout, Context context) {
@@ -61,7 +59,6 @@ public class PostListAdapter extends RecyclerView.Adapter<PostListAdapter.PostVi
 
 
     }
-
 
     @Override
     public void onBindViewHolder(PostViewHolder holder, final int position) {
@@ -109,7 +106,5 @@ public class PostListAdapter extends RecyclerView.Adapter<PostListAdapter.PostVi
     public int getItemCount() {
         return posts.size();
     }
-
-
 
 }

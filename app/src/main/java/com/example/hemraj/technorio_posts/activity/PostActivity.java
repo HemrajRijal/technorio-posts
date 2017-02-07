@@ -29,9 +29,6 @@ public class PostActivity extends AppCompatActivity {
 
     private static final String TAG = PostActivity.class.getSimpleName();
 
-    private final static String Post_1 = "1";
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,11 +58,7 @@ public class PostActivity extends AppCompatActivity {
                 Log.e(TAG, t.toString());
 
             }
-
-
         });
-
-
     }
 
     //Function to be called while pressing back navigation button
@@ -79,8 +72,5 @@ public class PostActivity extends AppCompatActivity {
         }
         return (super.onOptionsItemSelected(menuItem));
     }
-
-
-
 }
 

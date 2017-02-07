@@ -1,6 +1,5 @@
 package com.example.hemraj.technorio_posts.activity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,15 +7,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ListView;
 
 import com.example.hemraj.technorio_posts.R;
 import com.example.hemraj.technorio_posts.adapter.TagAdapter;
 import com.example.hemraj.technorio_posts.rest.ApiClient;
 import com.example.hemraj.technorio_posts.rest.ApiInterface;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -30,13 +26,6 @@ import retrofit2.Response;
 public class TagActivity extends AppCompatActivity {
 
     private static final String TAG = TagActivity.class.getSimpleName();
-
-    private ListView listView;
-    private Context context;
-    private View parentView;
-    private ArrayList<String> tagList;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +47,6 @@ public class TagActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<String>> call, Response<List<String>> response) {
                 List<String> languages = response.body();
-                Log.d(TAG, response.body().toString());
                 recyclerView.setAdapter(new TagAdapter(languages, R.layout.activity_tag, getApplicationContext()));
 
             }

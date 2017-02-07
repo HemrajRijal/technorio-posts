@@ -1,5 +1,6 @@
-package com.example.hemraj.technorio_posts.activity.activity;
+package com.example.hemraj.technorio_posts.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PostActivity.class);
+                startActivity(intent);
 
             }
         });

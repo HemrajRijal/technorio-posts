@@ -1,4 +1,4 @@
-package com.example.hemraj.technorio_posts.activity.activity.rest;
+package com.example.hemraj.technorio_posts.rest;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

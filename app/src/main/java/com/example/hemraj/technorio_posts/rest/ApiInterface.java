@@ -1,6 +1,6 @@
-package com.example.hemraj.technorio_posts.activity.activity.rest;
+package com.example.hemraj.technorio_posts.rest;
 
-import com.example.hemraj.technorio_posts.activity.activity.model.Post;
+import com.example.hemraj.technorio_posts.model.Post;
 
 import java.util.ArrayList;
 

@@ -20,19 +20,57 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.PostActivity"></activity>
-        <activity android:name=".activity.TagActivity"></activity>
-        <activity android:name=".activity.POST.Post1Tag"></activity>
-        <activity android:name=".activity.POST.Post2Tag"></activity>
-        <activity android:name=".activity.POST.Post3Tag"></activity>
-        <activity android:name=".activity.POST.Post4Tag"></activity>
-        <activity android:name=".activity.TAG.Tag1Post"></activity>
-        <activity android:name=".activity.TAG.Tag3Post"></activity>
-        <activity android:name=".activity.TAG.Tag4Post"></activity>
-        <activity android:name=".activity.TAG.Tag5Post"></activity>
-        <activity android:name=".activity.TAG.Tag6Post"></activity>
-        <activity android:name=".activity.TAG.Tag7Post"></activity>
-        <activity android:name=".activity.TAG.Tag8Post"></activity>
+        <activity
+            android:name=".activity.PostActivity"
+            android:label="@string/post_list" />
+
+        <activity
+            android:name=".activity.TagActivity"
+            android:label="@string/tag_list" />
+
+        <activity
+            android:name=".activity.POST.Post1Tag"
+            android:label="@string/tag_list" />
+
+        <activity
+            android:name=".activity.POST.Post2Tag"
+            android:label="@string/tag_list" />
+
+        <activity
+            android:name=".activity.POST.Post3Tag"
+            android:label="@string/tag_list" />
+
+        <activity
+            android:name=".activity.POST.Post4Tag"
+            android:label="@string/tag_list" />
+
+        <activity
+            android:name=".activity.TAG.Tag1Post"
+            android:label="@string/post_list" />
+
+        <activity
+            android:name=".activity.TAG.Tag3Post"
+            android:label="@string/post_list" />
+
+        <activity
+            android:name=".activity.TAG.Tag4Post"
+            android:label="@string/post_list" />
+
+        <activity
+            android:name=".activity.TAG.Tag5Post"
+            android:label="@string/post_list" />
+
+        <activity
+            android:name=".activity.TAG.Tag6Post"
+            android:label="@string/post_list" />
+
+        <activity
+            android:name=".activity.TAG.Tag7Post"
+            android:label="@string/post_list" />
+
+        <activity
+            android:name=".activity.TAG.Tag8Post"
+            android:label="@string/post_list" />
 
     </application>
 

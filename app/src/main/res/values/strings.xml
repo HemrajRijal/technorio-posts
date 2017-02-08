@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Technorio Challenge</string>
+    <string name="post_list">List of Post</string>
+    <string name="tag_list">List of Tag</string>
 </resources>
